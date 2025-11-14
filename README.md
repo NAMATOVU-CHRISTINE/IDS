@@ -242,7 +242,7 @@ Content-Type: application/json
   "timestamp": "2025-11-14T18:30:00",
   "model": "Random Forest (99.99% accuracy)"
 }
-```
+
 
 ## 📚 References
 
@@ -260,6 +260,5 @@ This project is for educational purposes as part of academic research at MUST.
 - Mbarara University of Science and Technology
 - NSL-KDD Dataset Contributors
 
----
 
 **Last Updated**: November 14, 2025
