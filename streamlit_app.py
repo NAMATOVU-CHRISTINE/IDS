@@ -234,30 +234,58 @@ else:
     ### 👥 Development Team
     """)
     
+    st.markdown("""
+    ### 👥 Team Roles & Responsibilities
+    """)
+    
+    # Create roles table
+    roles_data = {
+        "Role": [
+            "Machine Learning Engineers",
+            "Data Engineers", 
+            "Dashboard Developers"
+        ],
+        "Team Members": [
+            "Christine, Cosma",
+            "Johnson, Ambrose",
+            "Grace, Lailah"
+        ],
+        "Responsibilities": [
+            "• Data preprocessing and feature engineering • Training ML models (Random Forest, SVM, Logistic Regression, Neural Networks) • Hyperparameter tuning • Model evaluation (accuracy, precision, recall, F1-score) • Detecting anomalies using ML • Exporting final models using joblib • Writing ML documentation and performance reports",
+            "• Managing NSL-KDD dataset • Cleaning, filtering, transforming raw data • Building data ingestion and preprocessing pipelines • Handling missing values & encoding categorical fields • Implementing RobustScaler for feature scaling • Preparing final datasets for the ML team • Ensuring data quality and consistency",
+            "• Designing and building the Streamlit dashboard • Creating charts, metrics, alerts, and logs UI • Integrating backend ML prediction API • Real-time visualization of network traffic • Displaying intrusion alerts and system status • Improving dashboard user experience (UX/UI)"
+        ]
+    }
+    
+    st.dataframe(pd.DataFrame(roles_data), use_container_width=True, hide_index=True)
+    
+    st.markdown("---")
+    
+    # Team members table
     team_data = {
         "Name": [
             "Namatovu Christine",
-            "Kobugabe Lailah",
-            "Umutoni Grace Nshimiye",
-            "Masinde Ambrose Waiswa",
+            "Muyomba Wasswa Cosma",
             "Kasirye Johnson",
-            "Muyomba Wasswa Cosma"
+            "Masinde Ambrose Waiswa",
+            "Umutoni Grace Nshimiye",
+            "Kobugabe Lailah"
         ],
         "Registration": [
             "2023/BCS/004",
-            "2023/BCS/002",
-            "2023/BCS/166/PS",
-            "2023/BCS/074/PS",
+            "2023/BCS/084/PS",
             "2023/BCS/060/PS",
-            "2023/BCS/084/PS"
+            "2023/BCS/074/PS",
+            "2023/BCS/166/PS",
+            "2023/BCS/002"
         ],
-        "Role & Responsibilities": [
-            "Project Lead & ML Model Development: Coordinated team activities, developed Random Forest model, implemented model training pipeline, achieved 99.99% accuracy",
-            "Data Preprocessing & Feature Engineering: Cleaned NSL-KDD dataset, implemented RobustScaler, created one-hot encoding pipeline, generated 122 features from 43 original features",
-            "Frontend Development & UI/UX Design: Designed Streamlit dashboard interface, created interactive visualizations, implemented live detection form, deployed to Streamlit Cloud",
-            "Backend API Development & Deployment: Built Flask REST API, integrated trained model, implemented preprocessing pipeline, deployed to Render platform",
-            "Model Training & Evaluation: Trained 7 ML algorithms, performed model comparison, generated confusion matrices, analyzed feature importance, documented results",
-            "Documentation & Testing: Created comprehensive README, tested API endpoints, validated predictions, wrote project documentation, prepared final report"
+        "Role": [
+            "Machine Learning Engineer",
+            "Machine Learning Engineer",
+            "Data Engineer",
+            "Data Engineer",
+            "Dashboard Developer",
+            "Dashboard Developer"
         ]
     }
     

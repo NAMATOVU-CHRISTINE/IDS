@@ -11,14 +11,11 @@ A production-ready Intrusion Detection System (IDS) using machine learning to de
 ## 👥 Development Team
 **Mbarara University of Science and Technology (MUST)**
 
-| Name | Registration | Role |
-|------|-------------|------|
-| Namatovu Christine | 2023/BCS/004 | Project Lead, ML Model Development |
-| Kobugabe Lailah | 2023/BCS/002 | Data Preprocessing & Feature Engineering |
-| Umutoni Grace Nshimiye | 2023/BCS/166/PS | Frontend Development & UI/UX Design |
-| Masinde Ambrose Waiswa | 2023/BCS/074/PS | Backend API Development & Deployment |
-| Kasirye Johnson | 2023/BCS/060/PS | Model Training & Evaluation |
-| Muyomba Wasswa Cosma | 2023/BCS/084/PS | Documentation & Testing |
+| Role | Team Members | Responsibilities |
+|------|-------------|------------------|
+| **Machine Learning Engineers** | Christine (2023/BCS/004), Cosma (2023/BCS/084/PS) | • Data preprocessing and feature engineering • Training ML models (Random Forest, SVM, Logistic Regression, Neural Networks) • Hyperparameter tuning • Model evaluation (accuracy, precision, recall, F1-score) • Detecting anomalies using ML • Exporting final models using joblib • Writing ML documentation and performance reports |
+| **Data Engineers** | Johnson (2023/BCS/060/PS), Ambrose (2023/BCS/074/PS) | • Managing NSL-KDD dataset • Cleaning, filtering, transforming raw data • Building data ingestion and preprocessing pipelines • Handling missing values & encoding categorical fields • Implementing RobustScaler for feature scaling • Preparing final datasets for the ML team • Ensuring data quality and consistency |
+| **Dashboard Developers** | Grace (2023/BCS/166/PS), Lailah (2023/BCS/002) | • Designing and building the Streamlit dashboard • Creating charts, metrics, alerts, and logs UI • Integrating backend ML prediction API • Real-time visualization of network traffic • Displaying intrusion alerts and system status • Improving dashboard user experience (UX/UI) |
 
 **Supervisor**: Mr. Emmanuel Ruhamyankaka  
 **Date**: November 2025
