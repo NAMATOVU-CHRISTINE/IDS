@@ -250,6 +250,14 @@ else:
             "2023/BCS/074/PS",
             "2023/BCS/060/PS",
             "2023/BCS/084/PS"
+        ],
+        "Responsibility": [
+            "Project Lead, ML Model Development",
+            "Data Preprocessing & Feature Engineering",
+            "Frontend Development & UI/UX Design",
+            "Backend API Development & Deployment",
+            "Model Training & Evaluation",
+            "Documentation & Testing"
         ]
     }
     
