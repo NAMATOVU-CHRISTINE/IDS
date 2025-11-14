@@ -85,7 +85,7 @@ if page == "Home":
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.subheader("📈 Model Performance Comparison")
+        st.subheader("Model Performance Comparison")
         
         models = ["Logistic\nRegression", "Naive\nBayes", "Decision\nTree", 
                   "KNN", "SVM", "Random\nForest", "Neural\nNetwork"]
@@ -307,7 +307,7 @@ else:
     - Interactive web dashboard
     - Real-time traffic classification
     
-    ### 🛠️ Technologies
+    ### Technologies
     
     - **ML:** Scikit-learn, TensorFlow, XGBoost
     - **Frontend:** Streamlit
@@ -325,7 +325,7 @@ else:
     
     **© 2025 MUST Machine Learning Research Group**
     
-    🔗 **GitHub:** [View Source Code](https://github.com/NAMATOVU-CHRISTINE/IDS)
+    **GitHub:** [View Source Code](https://github.com/NAMATOVU-CHRISTINE/IDS)
     """)
 
 # Footer
