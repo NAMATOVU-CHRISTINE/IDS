@@ -17,8 +17,6 @@ A production-ready Intrusion Detection System (IDS) using machine learning to de
 | **Data Engineers** | Johnson (2023/BCS/060/PS), Ambrose (2023/BCS/074/PS) | • Managing NSL-KDD dataset • Cleaning, filtering, transforming raw data • Building data ingestion and preprocessing pipelines • Handling missing values & encoding categorical fields • Implementing RobustScaler for feature scaling • Preparing final datasets for the ML team • Ensuring data quality and consistency |
 | **Dashboard Developers** | Grace (2023/BCS/166/PS), Lailah (2023/BCS/002) | • Designing and building the Streamlit dashboard • Creating charts, metrics, alerts, and logs UI • Integrating backend ML prediction API • Real-time visualization of network traffic • Displaying intrusion alerts and system status • Improving dashboard user experience (UX/UI) |
 
-**Supervisor**: Mr. Emmanuel Ruhamyankaka  
-**Date**: November 2025
 
 ## 🎯 Key Features
 
