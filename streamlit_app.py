@@ -251,13 +251,13 @@ else:
             "2023/BCS/060/PS",
             "2023/BCS/084/PS"
         ],
-        "Responsibility": [
-            "Project Lead, ML Model Development",
-            "Data Preprocessing & Feature Engineering",
-            "Frontend Development & UI/UX Design",
-            "Backend API Development & Deployment",
-            "Model Training & Evaluation",
-            "Documentation & Testing"
+        "Role & Responsibilities": [
+            "Project Lead & ML Model Development: Coordinated team activities, developed Random Forest model, implemented model training pipeline, achieved 99.99% accuracy",
+            "Data Preprocessing & Feature Engineering: Cleaned NSL-KDD dataset, implemented RobustScaler, created one-hot encoding pipeline, generated 122 features from 43 original features",
+            "Frontend Development & UI/UX Design: Designed Streamlit dashboard interface, created interactive visualizations, implemented live detection form, deployed to Streamlit Cloud",
+            "Backend API Development & Deployment: Built Flask REST API, integrated trained model, implemented preprocessing pipeline, deployed to Render platform",
+            "Model Training & Evaluation: Trained 7 ML algorithms, performed model comparison, generated confusion matrices, analyzed feature importance, documented results",
+            "Documentation & Testing: Created comprehensive README, tested API endpoints, validated predictions, wrote project documentation, prepared final report"
         ]
     }
     
