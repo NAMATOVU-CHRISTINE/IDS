@@ -27,10 +27,29 @@ st.markdown("---")
 st.sidebar.title("🛡️ Navigation")
 page = st.sidebar.radio("Go to", ["🏠 Home", "🔍 Live Detection", "📊 Analytics", "ℹ️ About"])
 
-# Mock prediction function
+# API Configuration
+API_URL = "https://ids-api-33k6.onrender.com"
+
+# API prediction function
+def api_predict(data):
+    """Call API for prediction"""
+    try:
+        response = requests.post(f"{API_URL}/predict", json=data, timeout=10)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            st.error(f"API Error: {response.status_code}")
+            return None
+    except requests.exceptions.Timeout:
+        st.warning("API request timed out. Using fallback prediction.")
+        return mock_predict(data)
+    except Exception as e:
+        st.error(f"Connection error: {e}")
+        return None
+
+# Fallback mock prediction function
 def mock_predict(data):
-    """Simulate prediction for demo"""
-    # Simple rule-based mock
+    """Fallback prediction if API fails"""
     if data['src_bytes'] > 5000 or data['dst_bytes'] > 5000:
         return {
             'prediction': 'attack',
@@ -142,8 +161,11 @@ elif page == "🔍 Live Detection":
         }
         
         with st.spinner("Analyzing traffic..."):
-            time.sleep(1)
-            result = mock_predict(data)
+            result = api_predict(data)
+            
+        if not result:
+            st.error("Failed to get prediction. Please try again.")
+            st.stop()
         
         st.markdown("---")
         st.subheader("📊 Detection Result")
@@ -271,12 +293,21 @@ else:
 
 # Footer
 st.sidebar.markdown("---")
-st.sidebar.info("""
-**💡 Demo Mode**
 
-This is a standalone demo version.
+# Check API status
+try:
+    api_status = requests.get(f"{API_URL}/health", timeout=5)
+    if api_status.status_code == 200:
+        st.sidebar.success("🟢 API Connected")
+    else:
+        st.sidebar.warning("🟡 API Degraded")
+except:
+    st.sidebar.error("🔴 API Offline")
 
-For full API integration, deploy both:
-- API on Render
-- Dashboard on Streamlit Cloud
+st.sidebar.info(f"""
+**🔗 API Endpoint**
+
+{API_URL}
+
+Real-time predictions enabled!
 """)
