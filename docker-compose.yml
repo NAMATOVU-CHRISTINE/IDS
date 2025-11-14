@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # Flask API Backend
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: ids-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./models:/app/models
+      - ./api.py:/app/api.py
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    networks:
+      - ids-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Streamlit Dashboard Frontend
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: ids-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./dashboard.py:/app/dashboard.py
+    environment:
+      - API_URL=http://api:5000
+    depends_on:
+      - api
+    networks:
+      - ids-network
+    restart: unless-stopped
+
+networks:
+  ids-network:
+    driver: bridge
+
+volumes:
+  models:

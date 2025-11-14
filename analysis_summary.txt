@@ -1,0 +1,65 @@
+
+================================================================================
+INTRUSION DETECTION SYSTEM - ANALYSIS SUMMARY
+================================================================================
+
+Dataset Information:
+-------------------
+Total Records: 125,972
+Total Features: 43
+Memory Usage: 63.03 MB
+
+Feature Types:
+-------------
+Numeric Features: 39
+Categorical Features: 4
+
+Class Distribution:
+------------------
+Normal Traffic: 67,342 (53.5%)
+Attack Traffic: 58,630 (46.5%)
+
+Protocol Distribution:
+---------------------
+protocol_type
+tcp     102688
+udp      14993
+icmp      8291
+
+Top 10 Services:
+---------------
+service
+http        40338
+private     21853
+domain_u     9043
+smtp         7313
+ftp_data     6859
+eco_i        4586
+other        4359
+ecr_i        3077
+telnet       2353
+finger       1767
+
+Generated Visualizations:
+------------------------
+1. protocol_type_distribution.png
+2. outcome_distribution.png
+3. service_distribution.png
+4. correlation_matrix.png
+
+================================================================================
+DATA EXPLORATION COMPLETED SUCCESSFULLY!
+================================================================================
+
+Next Steps:
+-----------
+The data is now ready for:
+1. Feature engineering and preprocessing
+2. Model training (Logistic Regression, KNN, SVM, Decision Trees, Random Forest, Neural Networks)
+3. Model evaluation and comparison
+4. Threat level prediction using XGBoost
+
+To continue with model training, additional packages may be needed:
+- scikit-learn (for ML models)
+- tensorflow/keras (for neural networks)
+- xgboost (for gradient boosting)

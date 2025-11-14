@@ -1,0 +1,21 @@
+# Dockerfile for Streamlit Dashboard
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copy requirements
+COPY requirements_dashboard.txt .
+RUN pip install --no-cache-dir -r requirements_dashboard.txt
+
+# Copy application files
+COPY dashboard.py .
+
+# Expose port
+EXPOSE 8501
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s \
+    CMD curl -f http://localhost:8501/_stcore/health || exit 1
+
+# Run application
+CMD ["streamlit", "run", "dashboard.py", "--server.port=8501", "--server.address=0.0.0.0"]
