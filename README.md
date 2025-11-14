@@ -3,7 +3,7 @@
 ## Project Overview
 A production-ready Intrusion Detection System (IDS) using machine learning to detect network attacks in real-time. Built with Random Forest classifier achieving **99.99% accuracy** on the NSL-KDD dataset.
 
-## 🚀 Live Demo
+##  Live Demo
 - **Dashboard**: https://namatovu-christine-kjcaxsyrtwm7t7vkqp9jat.streamlit.app
 - **API Endpoint**: https://ids-api-33k6.onrender.com
 - **Status**: ✅ Live and Running
@@ -26,7 +26,7 @@ A production-ready Intrusion Detection System (IDS) using machine learning to de
 - **REST API**: Production-ready Flask API for predictions
 - **7 ML Models Compared**: Comprehensive algorithm evaluation
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐      HTTP/JSON      ┌──────────────┐
@@ -43,7 +43,7 @@ A production-ready Intrusion Detection System (IDS) using machine learning to de
                                         └─────────────┘
 ```
 
-## 📊 Dataset Information
+## Dataset Information
 
 - **Dataset**: NSL-KDD (Network Security Laboratory - Knowledge Discovery in Databases)
 - **Training Records**: 125,972
@@ -79,7 +79,7 @@ IDS/
 └── requirements_api.txt    # API dependencies
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Live Production System
 
@@ -154,7 +154,7 @@ streamlit run streamlit_app.py
 - **Algorithm**: Random Forest Classifier (scikit-learn)
 - **Training Time**: ~2 minutes on full dataset
 
-## 📊 Key Insights
+## Key Insights
 
 ### Protocol Distribution
 - **TCP**: 81.5%
@@ -169,7 +169,7 @@ streamlit run streamlit_app.py
 5. `serror_rate` - SYN error rate
 6. `same_srv_rate` - Same service rate
 
-## 🔬 Research Notebook
+## Research Notebook
 
 `ids_notebook.ipynb` contains:
 - Complete data exploration and visualization
@@ -244,7 +244,7 @@ Content-Type: application/json
 }
 
 
-## 📚 References
+## References:
 
 - NSL-KDD Dataset: https://www.unb.ca/cic/datasets/nsl.html
 - Original KDD Cup 1999: http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
