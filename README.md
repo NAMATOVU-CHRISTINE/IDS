@@ -1,7 +1,27 @@
-# Intrusion Detection System - NSL-KDD Dataset Analysis
+# 🛡️ Intrusion Detection System - Machine Learning Based Network Security
 
 ## Project Overview
-This project implements an Intrusion Detection System (IDS) using the NSL-KDD dataset with various machine learning and deep learning models.
+A production-ready Intrusion Detection System (IDS) using machine learning to detect network attacks in real-time. Built with Random Forest classifier achieving **99.99% accuracy** on the NSL-KDD dataset.
+
+## 🚀 Live Demo
+- **Dashboard**: https://namatovu-christine-kjcaxsyrtwm7t7vkqp9jat.streamlit.app
+- **API Endpoint**: https://ids-api-33k6.onrender.com
+- **Status**: ✅ Live and Running
+
+## 👥 Development Team
+**Mbarara University of Science and Technology (MUST)**
+
+| Name | Registration | Role |
+|------|-------------|------|
+| Namatovu Christine | 2023/BCS/004 | Project Lead, ML Model Development |
+| Kobugabe Lailah | 2023/BCS/002 | Data Preprocessing & Feature Engineering |
+| Umutoni Grace Nshimiye | 2023/BCS/166/PS | Frontend Development & UI/UX Design |
+| Masinde Ambrose Waiswa | 2023/BCS/074/PS | Backend API Development & Deployment |
+| Kasirye Johnson | 2023/BCS/060/PS | Model Training & Evaluation |
+| Muyomba Wasswa Cosma | 2023/BCS/084/PS | Documentation & Testing |
+
+**Supervisor**: Mr. Emmanuel Ruhamyankaka  
+**Date**: November 2025
 
 ## Dataset Information
 - **Dataset**: NSL-KDD (Network Security Laboratory - Knowledge Discovery in Databases)
