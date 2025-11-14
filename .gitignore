@@ -36,7 +36,7 @@ models/*.h5
 # Data files (too large)
 *.csv
 *.gz
-input/
+# input/  # Need training data for deployment
 
 # Temporary
 *.tmp
