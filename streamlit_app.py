@@ -296,13 +296,14 @@ st.sidebar.markdown("---")
 
 # Check API status
 try:
-    api_status = requests.get(f"{API_URL}/health", timeout=5)
+    api_status = requests.get(f"{API_URL}/health", timeout=15)
     if api_status.status_code == 200:
         st.sidebar.success("🟢 API Connected")
     else:
         st.sidebar.warning("🟡 API Degraded")
-except:
+except Exception as e:
     st.sidebar.error("🔴 API Offline")
+    st.sidebar.caption(f"({str(e)[:30]}...)")
 
 st.sidebar.info(f"""
 **🔗 API Endpoint**
