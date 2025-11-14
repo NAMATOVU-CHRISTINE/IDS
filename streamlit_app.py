@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 import time
+import requests
 
 # Page config
 st.set_page_config(
