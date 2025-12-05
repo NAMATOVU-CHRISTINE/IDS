@@ -340,11 +340,3 @@ try:
 except Exception as e:
     st.sidebar.error("API Offline")
     st.sidebar.caption(f"({str(e)[:30]}...)")
-
-st.sidebar.info(f"""
-**API Endpoint**
-
-{API_URL}
-
-Real-time predictions enabled!
-""")
