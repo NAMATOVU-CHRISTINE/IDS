@@ -122,7 +122,6 @@ if page == "Home":
 # LIVE DETECTION PAGE
 elif page == "Live Detection":
     st.title("Live Network Traffic Detection")
-    st.info("This is a demo version. Enter traffic parameters to test detection.")
     
     with st.form("detection_form"):
         col1, col2, col3 = st.columns(3)
