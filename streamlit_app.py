@@ -15,18 +15,18 @@ import requests
 # Page config
 st.set_page_config(
     page_title="IDS Dashboard",
-    page_icon="🛡️",
+    page_icon="🔒",
     layout="wide"
 )
 
 # Title
-st.markdown('<h1 style="text-align: center; color: #1f77b4;">🛡️ Intrusion Detection System</h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="text-align: center; color: #1f77b4;">Intrusion Detection System</h1>', unsafe_allow_html=True)
 st.markdown('<h3 style="text-align: center;">Machine Learning-Based Network Security Monitor</h3>', unsafe_allow_html=True)
 st.markdown("---")
 
 # Sidebar
-st.sidebar.title("🛡️ Navigation")
-page = st.sidebar.radio("Go to", ["🏠 Home", "🔍 Live Detection", "📊 Analytics", "ℹ️ About"])
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to", ["Home", "Live Detection", "Analytics", "About"])
 
 # API Configuration
 API_URL = "https://ids-api-33k6.onrender.com"
@@ -71,13 +71,13 @@ def mock_predict(data):
         }
 
 # HOME PAGE
-if page == "🏠 Home":
+if page == "Home":
     # Metrics
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Models Trained", "7")
     col2.metric("Best Accuracy", "99%")
     col3.metric("Dataset Size", "125,972")
-    col4.metric("Status", "🟢 Online")
+    col4.metric("Status", "Online")
     
     st.markdown("---")
     
@@ -85,7 +85,7 @@ if page == "🏠 Home":
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.subheader("📈 Model Performance Comparison")
+        st.subheader("Model Performance Comparison")
         
         models = ["Logistic\nRegression", "Naive\nBayes", "Decision\nTree", 
                   "KNN", "SVM", "Random\nForest", "Neural\nNetwork"]
@@ -110,7 +110,7 @@ if page == "🏠 Home":
         st.pyplot(fig)
     
     with col2:
-        st.subheader("🎯 Best Model: Random Forest")
+        st.subheader("Best Model: Random Forest")
         st.metric("Accuracy", "99.0%")
         st.metric("Precision", "96.1%")
         st.metric("Recall", "98.0%")
@@ -120,9 +120,8 @@ if page == "🏠 Home":
         st.info("**Dataset:** NSL-KDD\n\n**Features:** 122\n\n**Classes:** Normal, Attack")
 
 # LIVE DETECTION PAGE
-elif page == "🔍 Live Detection":
-    st.title("🔍 Live Network Traffic Detection")
-    st.info("💡 This is a demo version. Enter traffic parameters to test detection.")
+elif page == "Live Detection":
+    st.title("Live Network Traffic Detection")
     
     with st.form("detection_form"):
         col1, col2, col3 = st.columns(3)
@@ -146,7 +145,7 @@ elif page == "🔍 Live Detection":
             srv_count = st.number_input("Service Count", min_value=0, value=1)
             serror_rate = st.slider("SYN Error Rate", 0.0, 1.0, 0.0)
         
-        submitted = st.form_submit_button("🔍 Analyze Traffic", type="primary", use_container_width=True)
+        submitted = st.form_submit_button("Analyze Traffic", type="primary", use_container_width=True)
     
     if submitted:
         data = {
@@ -169,14 +168,14 @@ elif page == "🔍 Live Detection":
             st.stop()
         
         st.markdown("---")
-        st.subheader("📊 Detection Result")
+        st.subheader("Detection Result")
         
         if result['prediction'] == 'attack':
-            st.error(f"### ⚠️ ATTACK DETECTED!")
+            st.error(f"### ATTACK DETECTED!")
             st.metric("Confidence", f"{result['confidence']*100:.1f}%")
-            st.warning("**Recommended Actions:**\n- 🚫 Block source IP\n- 📝 Log incident\n- 🔔 Alert security team")
+            st.warning("**Recommended Actions:**\n- Block source IP\n- Log incident\n- Alert security team")
         else:
-            st.success(f"### ✅ Normal Traffic")
+            st.success(f"### Normal Traffic")
             st.metric("Confidence", f"{result['confidence']*100:.1f}%")
         
         col1, col2 = st.columns(2)
@@ -184,8 +183,8 @@ elif page == "🔍 Live Detection":
         col2.metric("Attack Probability", f"{result['probabilities']['attack']*100:.1f}%")
 
 # ANALYTICS PAGE
-elif page == "📊 Analytics":
-    st.title("📊 System Analytics")
+elif page == "Analytics":
+    st.title("System Analytics")
     
     tab1, tab2 = st.tabs(["Model Comparison", "Confusion Matrix"])
     
@@ -226,16 +225,16 @@ elif page == "📊 Analytics":
 
 # ABOUT PAGE
 else:
-    st.title("ℹ️ About This Project")
+    st.title("About This Project")
     
     st.markdown("""
     ## Intrusion Detection System Using Machine Learning
     
-    ### 👥 Development Team
+    ### Development Team
     """)
     
     st.markdown("""
-    ### 👥 Team Roles & Responsibilities
+    ### Team Roles & Responsibilities
     """)
     
     # Create roles table
@@ -298,7 +297,7 @@ else:
     
     ---
     
-    ### 🎯 Project Overview
+    ### Project Overview
     
     This system implements a machine learning-based intrusion detection system with:
     - 7 ML algorithms trained and compared
@@ -307,14 +306,14 @@ else:
     - Interactive web dashboard
     - Real-time traffic classification
     
-    ### 🛠️ Technologies
+    ### Technologies
     
     - **ML:** Scikit-learn, TensorFlow, XGBoost
     - **Frontend:** Streamlit
     - **Backend:** Flask API
     - **Deployment:** Docker, Streamlit Cloud
     
-    ### 📊 Dataset: NSL-KDD
+    ### Dataset: NSL-KDD
     
     - 125,972 training samples
     - 43 original features → 122 after preprocessing
@@ -325,7 +324,7 @@ else:
     
     **© 2025 MUST Machine Learning Research Group**
     
-    🔗 **GitHub:** [View Source Code](https://github.com/NAMATOVU-CHRISTINE/IDS)
+    **GitHub:** [View Source Code](https://github.com/NAMATOVU-CHRISTINE/IDS)
     """)
 
 # Footer
@@ -335,17 +334,9 @@ st.sidebar.markdown("---")
 try:
     api_status = requests.get(f"{API_URL}/health", timeout=15)
     if api_status.status_code == 200:
-        st.sidebar.success("🟢 API Connected")
+        st.sidebar.success("API Connected")
     else:
-        st.sidebar.warning("🟡 API Degraded")
+        st.sidebar.warning("API Degraded")
 except Exception as e:
-    st.sidebar.error("🔴 API Offline")
+    st.sidebar.error("API Offline")
     st.sidebar.caption(f"({str(e)[:30]}...)")
-
-st.sidebar.info(f"""
-**🔗 API Endpoint**
-
-{API_URL}
-
-Real-time predictions enabled!
-""")

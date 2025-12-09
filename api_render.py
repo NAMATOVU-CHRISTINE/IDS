@@ -34,12 +34,11 @@ def preprocess_input(data):
                 'domain_u', 'pop_3', 'finger', 'auth', 'other']
     flags = ['SF', 'S0', 'REJ', 'RSTO', 'RSTR', 'SH', 'S1', 'S2', 'RSTOS0', 'S3', 'OTH']
     
-    # Create base feature dict with numeric values
+    # Create base feature dict with numeric values (matching training order)
     features = {
         'duration': data.get('duration', 0),
         'src_bytes': data.get('src_bytes', 0),
         'dst_bytes': data.get('dst_bytes', 0),
-        'land': data.get('land', 0),
         'wrong_fragment': data.get('wrong_fragment', 0),
         'urgent': data.get('urgent', 0),
         'hot': data.get('hot', 0),
@@ -73,12 +72,26 @@ def preprocess_input(data):
         'dst_host_srv_rerror_rate': data.get('dst_host_srv_rerror_rate', 0.0),
     }
     
+    # Add categorical binary features (not scaled)
+    categorical_binary = {
+        'land': data.get('land', 0),
+        'logged_in': data.get('logged_in', 1),
+        'is_host_login': data.get('is_host_login', 0),
+        'is_guest_login': data.get('is_guest_login', 0),
+    }
+    
     # Scale numeric features
     df_num = pd.DataFrame([features])
     scaled_values = scaler.transform(df_num)
     
-    # Create full feature vector with one-hot encoding
+    # Create full feature vector
     full_features = {}
+    
+    # Add categorical binary features first (not scaled)
+    for key, value in categorical_binary.items():
+        full_features[key] = value
+    
+    # Add scaled numeric features
     for i, col in enumerate(df_num.columns):
         full_features[col] = scaled_values[0][i]
     

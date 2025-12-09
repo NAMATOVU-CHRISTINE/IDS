@@ -1,14 +1,14 @@
-# 🛡️ Intrusion Detection System - Machine Learning Based Network Security
+# Intrusion Detection System - Machine Learning Based Network Security
 
 ## Project Overview
 A production-ready Intrusion Detection System (IDS) using machine learning to detect network attacks in real-time. Built with Random Forest classifier achieving **99.99% accuracy** on the NSL-KDD dataset.
 
-##  Live Demo
+## 🚀 Live Demo
 - **Dashboard**: https://namatovu-christine-kjcaxsyrtwm7t7vkqp9jat.streamlit.app
 - **API Endpoint**: https://ids-api-33k6.onrender.com
-- **Status**: ✅ Live and Running
+- **Status**: Live and Running
 
-## 👥 Development Team
+## Development Team
 **Mbarara University of Science and Technology (MUST)**
 
 | Role | Team Members | Responsibilities |
@@ -18,7 +18,7 @@ A production-ready Intrusion Detection System (IDS) using machine learning to de
 | **Dashboard Developers** | Grace (2023/BCS/166/PS), Lailah (2023/BCS/002) | • Designing and building the Streamlit dashboard • Creating charts, metrics, alerts, and logs UI • Integrating backend ML prediction API • Real-time visualization of network traffic • Displaying intrusion alerts and system status • Improving dashboard user experience (UX/UI) |
 
 
-## 🎯 Key Features
+## Key Features
 
 - **Real-time Attack Detection**: Live network traffic classification
 - **99.99% Accuracy**: Random Forest model trained on 125,972 samples
@@ -60,7 +60,7 @@ The dataset contains 22 different types of attacks in 4 categories:
 3. **R2L (Remote to Local)**: ftp_write, guess_passwd, imap, multihop, phf, spy, warezclient, warezmaster
 4. **U2R (User to Root)**: buffer_overflow, loadmodule, perl, rootkit
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 IDS/
@@ -130,7 +130,7 @@ python api_render.py
 streamlit run streamlit_app.py
 ```
 
-## 🤖 Machine Learning Models
+## Machine Learning Models
 
 ### Models Evaluated
 
@@ -180,7 +180,7 @@ streamlit run streamlit_app.py
 - PCA dimensionality reduction experiments
 - Neural network architecture
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 **Machine Learning**
 - scikit-learn (Random Forest, preprocessing)
@@ -203,7 +203,7 @@ streamlit run streamlit_app.py
 - Streamlit Cloud (Dashboard hosting)
 - GitHub (Version control & CI/CD)
 
-## 📖 API Documentation
+## API Documentation
 
 ### Endpoints
 
@@ -242,19 +242,20 @@ Content-Type: application/json
   "timestamp": "2025-11-14T18:30:00",
   "model": "Random Forest (99.99% accuracy)"
 }
+```
 
 
-## References:
+## 📚 References
 
 - NSL-KDD Dataset: https://www.unb.ca/cic/datasets/nsl.html
 - Original KDD Cup 1999: http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
 - Random Forest: https://scikit-learn.org/stable/modules/ensemble.html#forest
 
-## 📄 License
+## License
 
 This project is for educational purposes as part of academic research at MUST.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Mr. Emmanuel Ruhamyankaka (Project Supervisor)
 - Mbarara University of Science and Technology
