@@ -1,6 +1,6 @@
 
 ================================================================================
-INTRUSION DETECTION SYSTEM - ANALYSIS SUMMARY
+INTRUSION DETECTION SYSTEM - ANALYSIS 
 ================================================================================
 
 Dataset Information:
