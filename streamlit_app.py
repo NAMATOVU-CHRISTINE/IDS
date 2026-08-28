@@ -230,70 +230,10 @@ else:
     st.markdown("""
     ## Intrusion Detection System Using Machine Learning
     
-    ### Development Team
-    """)
+    ### Developer
+    **Christine Namatovu**
     
-    st.markdown("""
-    ### Team Roles & Responsibilities
-    """)
-    
-    # Create roles table
-    roles_data = {
-        "Role": [
-            "Machine Learning Engineers",
-            "Data Engineers", 
-            "Dashboard Developers"
-        ],
-        "Team Members": [
-            "Christine, Cosma",
-            "Johnson, Ambrose",
-            "Grace, Lailah"
-        ],
-        "Responsibilities": [
-            "• Data preprocessing and feature engineering • Training ML models (Random Forest, SVM, Logistic Regression, Neural Networks) • Hyperparameter tuning • Model evaluation (accuracy, precision, recall, F1-score) • Detecting anomalies using ML • Exporting final models using joblib • Writing ML documentation and performance reports",
-            "• Managing NSL-KDD dataset • Cleaning, filtering, transforming raw data • Building data ingestion and preprocessing pipelines • Handling missing values & encoding categorical fields • Implementing RobustScaler for feature scaling • Preparing final datasets for the ML team • Ensuring data quality and consistency",
-            "• Designing and building the Streamlit dashboard • Creating charts, metrics, alerts, and logs UI • Integrating backend ML prediction API • Real-time visualization of network traffic • Displaying intrusion alerts and system status • Improving dashboard user experience (UX/UI)"
-        ]
-    }
-    
-    st.dataframe(pd.DataFrame(roles_data), use_container_width=True, hide_index=True)
-    
-    st.markdown("---")
-    
-    # Team members table
-    team_data = {
-        "Name": [
-            "Namatovu Christine",
-            "Muyomba Wasswa Cosma",
-            "Kasirye Johnson",
-            "Masinde Ambrose Waiswa",
-            "Umutoni Grace Nshimiye",
-            "Kobugabe Lailah"
-        ],
-        "Registration": [
-            "2023/BCS/004",
-            "2023/BCS/084/PS",
-            "2023/BCS/060/PS",
-            "2023/BCS/074/PS",
-            "2023/BCS/166/PS",
-            "2023/BCS/002"
-        ],
-        "Role": [
-            "Machine Learning Engineer",
-            "Machine Learning Engineer",
-            "Data Engineer",
-            "Data Engineer",
-            "Dashboard Developer",
-            "Dashboard Developer"
-        ]
-    }
-    
-    st.table(pd.DataFrame(team_data))
-    
-    st.markdown("""
-    **Supervisor:** Mr. Emmanuel Ruhamyankaka  
-    **Institution:** Mbarara University of Science and Technology (MUST)  
-    **Date:** November 2025
+    A production-ready machine learning system for detecting network intrusions in real-time.
     
     ---
     
@@ -305,13 +245,28 @@ else:
     - NSL-KDD dataset (125,972 samples)
     - Interactive web dashboard
     - Real-time traffic classification
+    - REST API for predictions
+    
+    ### Key Responsibilities
+    
+    - Data preprocessing and feature engineering
+    - Training ML models (Random Forest, SVM, Logistic Regression, Neural Networks)
+    - Hyperparameter tuning and model evaluation
+    - Managing NSL-KDD dataset and building data pipelines
+    - Implementing RobustScaler for feature scaling
+    - Building Flask REST API for predictions
+    - Designing and developing Streamlit dashboard
+    - Real-time visualization of network traffic
+    - Deployment on Render and Streamlit Cloud
     
     ### Technologies
     
     - **ML:** Scikit-learn, TensorFlow, XGBoost
     - **Frontend:** Streamlit
     - **Backend:** Flask API
-    - **Deployment:** Docker, Streamlit Cloud
+    - **Deployment:** Render, Streamlit Cloud
+    - **Data Processing:** Pandas, NumPy
+    - **Visualization:** Matplotlib, Seaborn
     
     ### Dataset: NSL-KDD
     
@@ -320,9 +275,17 @@ else:
     - Binary classification (Normal vs Attack)
     - 4 attack categories: DoS, Probe, R2L, U2R
     
+    ### Model Performance
+    
+    **Best Model: Random Forest**
+    - Accuracy: 99.99%
+    - Precision: 99.93%
+    - Recall: 99.81%
+    - F1-Score: 99.87%
+    
     ---
     
-    **© 2025 MUST Machine Learning Research Group**
+    **© 2025 Christine Namatovu**
     
     **GitHub:** [View Source Code](https://github.com/NAMATOVU-CHRISTINE/IDS)
     """)
