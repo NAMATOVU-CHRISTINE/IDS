@@ -1,4 +1,4 @@
-# 🚀 Deployment Guide - IDS System
+#Deployment Guide - IDS System
 
 ## Overview
 This guide explains how to deploy the Intrusion Detection System to production.
