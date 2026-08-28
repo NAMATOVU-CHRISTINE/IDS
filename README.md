@@ -8,10 +8,8 @@ A production-ready Intrusion Detection System (IDS) using machine learning to de
 - **API Endpoint**: https://ids-api-33k6.onrender.com
 - **Status**: Live and Running
 
-## Developer
-**Christine Namatovu**
 
-**Responsibilities**:
+**Highlight**:
 - Data preprocessing and feature engineering
 - Training ML models (Random Forest, SVM, Logistic Regression, Neural Networks)
 - Hyperparameter tuning and model evaluation
