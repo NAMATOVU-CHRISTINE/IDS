@@ -4,14 +4,12 @@
 A production-ready Intrusion Detection System (IDS) using machine learning to detect network attacks in real-time. Built with Random Forest classifier achieving **99.99% accuracy** on the NSL-KDD dataset.
 
 ## Live Demo
-- **Dashboard**: https://namatovu-christine-kjcaxsyrtwm7t7vkqp9jat.streamlit.app
 - **API Endpoint**: https://ids-api-33k6.onrender.com
+- **Dashboard**: https://namatovu-christine-kjcaxsyrtwm7t7vkqp9jat.streamlit.app
 - **Status**: Live and Running
 
-## Developer
-**Christine Namatovu**
 
-**Responsibilities**:
+**Highlight**:
 - Data preprocessing and feature engineering
 - Training ML models (Random Forest, SVM, Logistic Regression, Neural Networks)
 - Hyperparameter tuning and model evaluation
