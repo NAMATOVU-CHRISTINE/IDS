@@ -8,14 +8,18 @@ A production-ready Intrusion Detection System (IDS) using machine learning to de
 - **API Endpoint**: https://ids-api-33k6.onrender.com
 - **Status**: Live and Running
 
-## Development Team
-**Mbarara University of Science and Technology (MUST)**
+## Developer
+**Christine Namatovu**
 
-| Role | Team Members | Responsibilities |
-|------|-------------|------------------|
-| **Machine Learning Engineers** | Christine (2023/BCS/004), Cosma (2023/BCS/084/PS) | • Data preprocessing and feature engineering • Training ML models (Random Forest, SVM, Logistic Regression, Neural Networks) • Hyperparameter tuning • Model evaluation (accuracy, precision, recall, F1-score) • Detecting anomalies using ML • Exporting final models using joblib • Writing ML documentation and performance reports |
-| **Data Engineers** | Johnson (2023/BCS/060/PS), Ambrose (2023/BCS/074/PS) | • Managing NSL-KDD dataset • Cleaning, filtering, transforming raw data • Building data ingestion and preprocessing pipelines • Handling missing values & encoding categorical fields • Implementing RobustScaler for feature scaling • Preparing final datasets for the ML team • Ensuring data quality and consistency |
-| **Dashboard Developers** | Grace (2023/BCS/166/PS), Lailah (2023/BCS/002) | • Designing and building the Streamlit dashboard • Creating charts, metrics, alerts, and logs UI • Integrating backend ML prediction API • Real-time visualization of network traffic • Displaying intrusion alerts and system status • Improving dashboard user experience (UX/UI) |
+**Responsibilities**:
+- Data preprocessing and feature engineering
+- Training ML models (Random Forest, SVM, Logistic Regression, Neural Networks)
+- Hyperparameter tuning and model evaluation
+- Managing NSL-KDD dataset and data pipelines
+- Building Flask REST API for predictions
+- Designing and developing Streamlit dashboard
+- Real-time visualization and intrusion detection
+- Deployment on Render and Streamlit Cloud
 
 
 ## Key Features
@@ -253,12 +257,10 @@ Content-Type: application/json
 
 ## License
 
-This project is for educational purposes as part of academic research at MUST.
+This project is for educational and portfolio purposes.
 
 ## Acknowledgments
 
-- Mr. Emmanuel Ruhamyankaka (Project Supervisor)
-- Mbarara University of Science and Technology
 - NSL-KDD Dataset Contributors
 
 
