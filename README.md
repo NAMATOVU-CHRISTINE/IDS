@@ -4,8 +4,8 @@
 A production-ready Intrusion Detection System (IDS) using machine learning to detect network attacks in real-time. Built with Random Forest classifier achieving **99.99% accuracy** on the NSL-KDD dataset.
 
 ## Live Demo
-- **API Endpoint**: https://ids-api-33k6.onrender.com
 - **Dashboard**: https://namatovu-christine-kjcaxsyrtwm7t7vkqp9jat.streamlit.app
+- **API Endpoint**: https://ids-api-33k6.onrender.com
 - **Status**: Live and Running
 
 
